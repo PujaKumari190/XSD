@@ -1,0 +1,17 @@
+[XML3] : [PASSED] 
+ Start Time : [ Tue Jan 18 11:38:43 PST 2022] || End Time : [ Tue Jan 18 11:38:43 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:0]
+XML3  -----------
+	update regressions set timetaken = '0d 0:0:1' , passcount= 1 where regid = null;
+	streamnode>>errors>>customchecks>>systemencodingchecks>>error>>Params>>parm(name is in String type):: [STATUS : PASS]
+	streamnode>>errors>>customchecks>>genericaudiochecks(section name=custom)::null [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(name not null):: [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(sectionName not null):: [STATUS : PASS]
+	streamnode>>errors>>customchecks>>DolbyEaudiochecks(name= DolbyE Audio):: [STATUS : PASS]
+	streamnode>>errors>>customchecks>>DolbyEaudiochecks>>error(EBUCode=0068F):: [STATUS : PASS]
+	streamnode>>errors>>info>>field>>ProgramConfigDolbyE>>ProgramConfiguration(value should not be null or it should be 0)::0 [STATUS : PASS]
+	streamnode>>errors>>info>>field>>ProgramConfigDolbyE>>ProgramSequence(value should not be null or it shlould be 5.1+2 )::5.1+2 [STATUS : PASS]
+	streamnode>>program>>(contains Error,ProgramId and Warning with correct value)::1 [STATUS : PASS]
+	streamnode>>program>>info>>field>>ProgramLoudness>>Speech(length is grater than 1 and value = 88):: [STATUS : PASS]
+	streamnode>>program>>info>>field>>ProgramLoudness>>level(length is grater than 1 and Unit =LKFS):: [STATUS : PASS]
+	streamnode>>program>>info>>field>>LoudnessValues(has LoudnessRange,ProgramLoudness,end,start child tag and are not null):: [STATUS : PASS]

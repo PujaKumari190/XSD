@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9291" started-at="2022-01-21T03:12:15Z" finished-at="2022-01-21T03:12:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9291" started-at="2022-01-21T03:12:15Z" finished-at="2022-01-21T03:12:24Z">
+      <class name="com.interra.XSD.XML5">
+        <test-method status="PASS" signature="preClassLog()[pri:0, instance:com.interra.XSD.XML5@1d2adfbe]" name="preClassLog" is-config="true" duration-ms="24" started-at="2022-01-21T03:12:15Z" finished-at="2022-01-21T03:12:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preClassLog -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestResult)[pri:0, instance:com.interra.XSD.XML5@1d2adfbe]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2022-01-21T03:12:15Z" finished-at="2022-01-21T03:12:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=XML1 status=SUCCESS method=XML5.XML1()[pri:0, instance:com.interra.XSD.XML5@1d2adfbe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="XML1()[pri:0, instance:com.interra.XSD.XML5@1d2adfbe]" name="XML1" duration-ms="9141" started-at="2022-01-21T03:12:15Z" finished-at="2022-01-21T03:12:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XML1 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.interra.XSD.XML5@1d2adfbe]" name="afterMethod" is-config="true" duration-ms="4" started-at="2022-01-21T03:12:24Z" finished-at="2022-01-21T03:12:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=XML1 status=SUCCESS method=XML5.XML1()[pri:0, instance:com.interra.XSD.XML5@1d2adfbe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="postClassLog()[pri:0, instance:com.interra.XSD.XML5@1d2adfbe]" name="postClassLog" is-config="true" duration-ms="85" started-at="2022-01-21T03:12:24Z" finished-at="2022-01-21T03:12:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postClassLog -->
+      </class> <!-- com.interra.XSD.XML5 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

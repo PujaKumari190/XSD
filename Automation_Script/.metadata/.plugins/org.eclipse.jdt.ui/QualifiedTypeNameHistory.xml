@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="generated.Field.CbLevels.SignalLevelMaxAttr"/>
+<fullyQualifiedTypeName name="generated.Field.CbLevels.SignalLevelMaxAttr.Level"/>
+<fullyQualifiedTypeName name="generated.Field.CbLevels.SignalLevelMaxAttr.Ire"/>
+<fullyQualifiedTypeName name="generated.Field.CbLevels.SignalLevelMaxAttr.Mv"/>
+<fullyQualifiedTypeName name="generated.Field.CbLevels.SignalLevelMinAttr"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr.Level"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr.Ire"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr.Mv"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMinAttr"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMinAttr.SignalLevelTimeCodes"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMinAttr.SignalLevelTimeCodes.Timecode"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr.SignalLevelTimeCodes"/>
+<fullyQualifiedTypeName name="generated.Field.YLevels.SignalLevelMaxAttr.SignalLevelTimeCodes.Timecode"/>
+<fullyQualifiedTypeName name="generated.Field.GOPStructures"/>
+<fullyQualifiedTypeName name="generated.Field.GOPStructures.GOPStructure"/>
+<fullyQualifiedTypeName name="generated.Field.GOPStructures.GOPStructure.M"/>
+<fullyQualifiedTypeName name="generated.Field.GOPStructures.GOPStructure.Coverage"/>
+<fullyQualifiedTypeName name="generated.Field.AverageGOPLength"/>
+<fullyQualifiedTypeName name="generated.Field.GOPCount"/>
+<fullyQualifiedTypeName name="generated.Field.TruePeakStruct"/>
+<fullyQualifiedTypeName name="generated.Field.TruePeakStruct.Channel"/>
+<fullyQualifiedTypeName name="generated.Field.TruePeakStruct.Level"/>
+<fullyQualifiedTypeName name="generated.Field.TruePeakStruct.Timecode"/>
+<fullyQualifiedTypeName name="generated.Field.NewBitDepths"/>
+<fullyQualifiedTypeName name="generated.Field.NewBitDepths.NewBitDepth"/>
+<fullyQualifiedTypeName name="generated.Field.NewBitDepths.NewBitDepth.NewChromaBitDepth"/>
+<fullyQualifiedTypeName name="generated.Field.NewBitDepths.NewBitDepth.NewLumaBitDepth"/>
+<fullyQualifiedTypeName name="com.interra.Base.Base"/>
+</qualifiedTypeNameHistroy>

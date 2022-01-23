@@ -1,0 +1,10 @@
+[XML3] : [PASSED] 
+ Start Time : [ Wed Jan 12 22:28:49 PST 2022] || End Time : [ Wed Jan 12 22:29:39 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:50]
+XML3  -----------
+	streamnode>>errors>>customchecks>>genericaudiochecks(section name=custom)::MD5File [STATUS : PASS]
+	streamnode>>errors>>customchecks>>genericaudiochecks(section name=custom)::null [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(name not null)::Audio Quality [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(sectionName not null)::Common [STATUS : PASS]
+	streamnode>>errors>>customchecks>>DolbyEaudiochecks(name= DolbyE Audio)::DolbyE Audio [STATUS : PASS]
+	streamnode>>errors>>customchecks>>DolbyEaudiochecks>>error(EBUCode=0068F)::0068F [STATUS : PASS]

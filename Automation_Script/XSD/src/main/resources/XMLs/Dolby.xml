@@ -1,0 +1,705 @@
+<taskReport encoding="utf-8" lastUpdate="1642034267.48" lastUpdate_ISO="2022-01-12T16:37:47.478000" updatedBy="">
+
+  <toplevelinfo Error="35" Filepath="\\192.168.4.181\BatonGuiAutomation_SHARED\BatonDump\ContentLocationSuite\dolby\The_Voices_25fps.dde" Format="Dolby-E Audio" Neighbours="0" Summary="File has 35 errors, 2 warnings" Warning="2" />
+
+  <hierarchy value="(SYS)(SYS Level=-1- Name=-Audio- ID=-NA- IDName=-StreamID-/)(SYS Level=-2- Name=-DolbyE Audio- ID=-0- parent=-0-/)(/SYS)" />
+
+  <streamnode id="-1" name="Elementary File" parent="0">
+    <errors>
+      <customchecks>
+        <systemencodingchecks name="System Level" sectionName="Common">
+          <error description="The MD5 file is Missing. It is expected to be Present. Specified criteria: Report as Serious if Mismatch in MD5 detected" id="SYS.0008.02" item="MD5" severity="Serious" subitem="MD5" synopsis="MD5 file missing.">
+            <Params>
+              <Param Name="MD5File" Value="Missing" />
+            </Params>
+          </error>
+        </systemencodingchecks>
+      </customchecks>
+      <conformancechecks />
+    </errors>
+    <info>
+      <field id="0" media="audio" name="ContentLayout" programid="1" type="complex" value="Refer to Content Layout View">
+        <specifiedLayout />
+        <actualLayout>
+          <segment FrameDuration="1043" SMPTETimecodeDuration="00:00:34:23" TimeCodeDuration="00:00:34:760" endframeindex="1042" endsmptetimecode="00:00:34:23" endtimecode="00:00:34:760" itemtype="Any" startframeindex="0" startsmptetimecode="00:00:00:00" starttimecode="00:00:00:000" type="Content" />
+          <segment FrameDuration="111" SMPTETimecodeDuration="00:00:03:20" TimeCodeDuration="00:00:03:680" endframeindex="1153" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" itemtype="Any" startframeindex="1043" startsmptetimecode="00:00:34:23" starttimecode="00:00:34:760" type="Silence" />
+        </actualLayout>
+      </field>
+      <field id="0" media="audio" name="ContentLayout" programid="2" type="complex" value="Refer to Content Layout View">
+        <specifiedLayout />
+        <actualLayout>
+          <segment FrameDuration="1042" SMPTETimecodeDuration="00:00:34:22" TimeCodeDuration="00:00:34:720" endframeindex="1041" endsmptetimecode="00:00:34:22" endtimecode="00:00:34:720" itemtype="Any" startframeindex="0" startsmptetimecode="00:00:00:00" starttimecode="00:00:00:000" type="Content" />
+          <segment FrameDuration="112" SMPTETimecodeDuration="00:00:03:22" TimeCodeDuration="00:00:03:720" endframeindex="1153" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" itemtype="Any" startframeindex="1042" startsmptetimecode="00:00:34:22" starttimecode="00:00:34:720" type="Silence" />
+        </actualLayout>
+      </field>
+      <field name="MD5" value="f85bcd030d2b1cf340935243ea33825b" />
+      <field name="FileSize" value="14038288" />
+    </info>
+    <summary />
+  </streamnode>
+
+  <streamnode EncodedDuration="-1" Error="34" StartTimecode="0" TimecodeType="Real" Warning="2" id="0" name="DolbyE Audio" parent="0">
+    <errors>
+      <customchecks>
+        <genericaudiochecks name="Audio Description" sectionName="Common">
+          <error EBUCode="0004F" description="The number of audio channels is 7. Specified criteria: Report as Serious if 'Audio Channels'  is not 2" id="AD.0004.01" item="Audio Channels" location="Frame[0]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:00:00" subitem="Audio Channels" synopsis="The number of audio channels does not match the specified criteria." timecode="00:00:00:000">
+            <Params>
+              <Param Name="NumChannels" Value="7" />
+            </Params>
+          </error>
+          <error EBUCode="0003F,0059F" description="Bits per sample is 20. Specified criteria: Report as Serious if 'Bits per Sample' is not 16" id="AD.0007.01" item="Bits per sample" location="Frame[0]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:00:00" subitem="Bits per sample" synopsis="Bits per sample does not match the specified criteria." timecode="00:00:00:000">
+            <Params>
+              <Param Name="BitsPerSample" Value="20" />
+            </Params>
+          </error>
+          <error EBUCode="0068F" description="The bit rate of the audio is 365. Specified criteria: Report as Serious if 'Bit Rate'  more than 256 Kbps" id="AD.0002.01" item="Bit Rate" location="Frame[961]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:38:13" subitem="Bit Rate" synopsis="The bit rate of the audio does not match the specified criteria." timecode="00:00:38:440">
+            <Params>
+              <Param Name="BitRate" Value="365" />
+            </Params>
+          </error>
+        </genericaudiochecks>
+        <decodedaudiochecks name="Audio Quality" sectionName="Common" />
+        <DolbyEaudiochecks name="DolbyE Audio" sectionName="Common">
+          <error description="The encoded value of Frame Rate metadata is 25." id="DLB.0005.01" item="DolbyE Framerate" location="Frame[0]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:00:00" subitem="Framerate" synopsis="Frame Rate in DolbyE metadata does not match the specified criteria." timecode="00:00:00:000">
+            <Params>
+              <Param Name="Framerate" Value="25" />
+            </Params>
+          </error>
+          <error EBUCode="0068F" description="The bit rate of the DolbyE audio is 365 Kbps. Specified criteria: Report as Serious if 'DolbyE Bit Rate'  more than 256 Kbps" id="DLB.0008.01" item="DolbyEBitrate" location="Frame[961]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:38:13" subitem="DolbyEBitrate" synopsis="The bit rate of the DolbyE audio does not match the specified criteria." timecode="00:00:38:440">
+            <Params>
+              <Param Name="DolbyEBitrate" Value="365" />
+            </Params>
+          </error>
+        </DolbyEaudiochecks>
+      </customchecks>
+      <conformancechecks />
+    </errors>
+    <info>
+      <field name="Sampling Frequency" timecode="00:00:00:000" value="48000" />
+      <field name="Audio Channels" timecode="00:00:00:000" value="7" />
+      <field name="LFE Channels" timecode="00:00:00:000" value="1" />
+      <field name="Bits per sample" timecode="00:00:00:000" value="20" />
+      <field name="Channel Configuration" timecode="00:00:00:000" value="L1 R1 C LFE SL SR L2 R2" />
+      <field name="Program Configuration">
+        <ProgramConfigDolbyE>
+          <ProgramConfiguration value="0" />
+          <ProgramSequence value="5.1+2" />
+        </ProgramConfigDolbyE>
+      </field>
+      <field name="dolbyE::Dialogue Normalization" timecode="00:00:00:000" unit="dB" value="-27" />
+      <field name="Center Downmix Level" timecode="00:00:00:000" unit="dB" value="-3.0" />
+      <field name="Surround Downmix Level" timecode="00:00:00:000" unit="dB" value="-3.0" />
+      <field name="Frame Rate" timecode="00:00:00:000" value="25" />
+      <field name="Bit Rate" timecode="00:00:38:440" unit="Kbps" value="365" />
+      <field internal="yes" name="Duration_msec" value="00:00:38:440" />
+      <field name="Audio::Duration" value="00:00:38:440" />
+      <field name="DolbyEBitrate" timecode="00:00:38:440" unit="Kbps" value="365" />
+      <field desc="Info not found" name="DolbyEStartOffset" />
+      <field name="Sampling Frequency Change" value="false" />
+      <field name="Bit Rate Change" value="false" />
+      <field name="Audio Channels Change" value="false" />
+      <field desc="Info not found" name="Guard Band" />
+      <field desc="Info not found" name="ProgramDescriptionText" />
+    </info>
+    <summary />
+    <Program Error="15" ProgramId="1" Warning="1">
+      <info>
+        <field name="Program Sequence" value="5.1" />
+        <field name="Applied Channel Configuration" value="L1, R1, C, LFE, SL, SR" />
+        <field name="Misplaced Channels" value="L, C, SL, LFE, SR, R" />
+        <field desc="Not Present" name="NAES2" />
+        <field desc="Not Present" name="NWM" />
+        <field desc="Not Present" name="NAES2HF" />
+        <field name="Nielsen Watermark" value="Not Present" />
+        <field name="Pink Noise" value="Not Present" />
+        <field name="White Noise" value="Not Present" />
+        <field name="Phase Mismatch" value="Not Present" />
+        <field name="PPM Meter">
+          <mapping key="M6" value="4.13" />
+        </field>
+        <field name="BVS Watermark" value="Info not found" />
+        <field name="Minimum Level" value="-99.00" />
+        <field name="Audio Click" value="Not Present" />
+        <field desc="Cant be Determined" name="Speech Presence" />
+        <field name="EAS Message" value="Not Present" />
+        <field name="Average Level">
+          <mapping key="L1" value="-35.887" />
+        </field>
+        <field name="MomentaryLoudness70" value="-17.8" />
+        <field name="ShortTermLoudness70" value="-21.6" />
+        <field name="ProgramLoudnessSpeechGated">
+          <ProgramLoudness>
+            <Speech value="88" />
+            <level desc="Can't be determined" unit="LKFS" />
+          </ProgramLoudness>
+        </field>
+        <field name="ProgramLoudnessCALMAct">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-23.9" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="Average Loudness">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-23.9" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="AverageLoudnessARIB">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-23.9" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="EBULoudness">
+          <LoudnessValues>
+            <LoudnessRange value="5.4" />
+            <ProgramLoudness value="-23.9" />
+            <end value="00:00:38:440" />
+            <start value="00:00:00:000" />
+          </LoudnessValues>
+        </field>
+        <field name="OP59Loudness">
+          <LoudnessValues>
+            <LoudnessRange value="5.4" />
+            <ProgramLoudness value="-23.9" />
+            <end value="00:00:38:440" />
+            <start value="00:00:00:000" />
+          </LoudnessValues>
+        </field>
+        <field name="LoudnessProfile">
+          <ProgramLoudnessLevel value="-23.9" />
+          <ProgramLoudnessSpeech value="Can't be determined" />
+          <Speech value="88" />
+          <SpeechThresh value="20" />
+        </field>
+        <field name="AudioLanguage">
+          <LScore value="52" />
+          <Language value="Dutch" />
+        </field>
+        <field name="LowPassFilter" value="Not Present" />
+        <field name="Audio Loop">
+          <mapping key="L1" value="Not Present" />
+          <mapping key="R1" value="Not Present" />
+          <mapping key="C" value="Not Present" />
+        </field>
+        <field name="LinePattern75" value="Not Present" />
+        <field name="Echo" value="Not Present" />
+        <field name="Reverb" value="Not Present" />
+        <field name="TruePeakLevelCALMAct2">
+          <TruePeakStruct>
+            <channel value="L1" />
+            <level value="-7.2" />
+            <timecode value="00:00:00:600" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R1" />
+            <level value="-8.7" />
+            <timecode value="00:00:03:520" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="C" />
+            <level value="-12.4" />
+            <timecode value="00:00:07:720" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="LFE" />
+            <level value="-33.2" />
+            <timecode value="00:00:27:480" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SL" />
+            <level value="-12.4" />
+            <timecode value="00:00:23:080" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SR" />
+            <level value="-7.1" />
+            <timecode value="00:00:20:560" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelOP592">
+          <TruePeakStruct>
+            <channel value="L1" />
+            <level value="-7.2" />
+            <timecode value="00:00:00:600" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R1" />
+            <level value="-8.7" />
+            <timecode value="00:00:03:520" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="C" />
+            <level value="-12.4" />
+            <timecode value="00:00:07:720" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="LFE" />
+            <level value="-33.2" />
+            <timecode value="00:00:27:480" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SL" />
+            <level value="-12.4" />
+            <timecode value="00:00:23:080" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SR" />
+            <level value="-7.1" />
+            <timecode value="00:00:20:560" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelEBU2">
+          <TruePeakStruct>
+            <channel value="L1" />
+            <level value="-7.2" />
+            <timecode value="00:00:00:600" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R1" />
+            <level value="-8.7" />
+            <timecode value="00:00:03:520" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="C" />
+            <level value="-12.4" />
+            <timecode value="00:00:07:720" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="LFE" />
+            <level value="-33.2" />
+            <timecode value="00:00:27:480" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SL" />
+            <level value="-12.4" />
+            <timecode value="00:00:23:080" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SR" />
+            <level value="-7.1" />
+            <timecode value="00:00:20:560" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelITU2">
+          <TruePeakStruct>
+            <channel value="L1" />
+            <level value="-7.2" />
+            <timecode value="00:00:00:600" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R1" />
+            <level value="-8.7" />
+            <timecode value="00:00:03:520" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="C" />
+            <level value="-12.4" />
+            <timecode value="00:00:07:720" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="LFE" />
+            <level value="-33.2" />
+            <timecode value="00:00:27:480" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SL" />
+            <level value="-12.4" />
+            <timecode value="00:00:23:080" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SR" />
+            <level value="-7.1" />
+            <timecode value="00:00:20:560" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelARIB2">
+          <TruePeakStruct>
+            <channel value="L1" />
+            <level value="-7.2" />
+            <timecode value="00:00:00:600" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R1" />
+            <level value="-8.6" />
+            <timecode value="00:00:03:520" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="C" />
+            <level value="-12.4" />
+            <timecode value="00:00:07:720" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="LFE" />
+            <level value="-33.2" />
+            <timecode value="00:00:27:480" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SL" />
+            <level value="-12.4" />
+            <timecode value="00:00:23:080" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="SR" />
+            <level value="-7.1" />
+            <timecode value="00:00:20:560" />
+          </TruePeakStruct>
+        </field>
+        <field name="Maximum Level">
+          <mapping key="L1" value="-7.245" />
+        </field>
+        <field name="Level Mismatch" value="Present" />
+        <field name="Transient Noise" value="Not Present" />
+        <field name="Wow and Flutter" value="Not Present" />
+        <field name="Background Noise" value="Not Present" />
+        <field name="Jitter Noise" value="Not Present" />
+        <field name="Audio Clipping" value="Not Present" />
+        <field name="High Frequency Noise" value="Not Present" />
+        <field name="Overmodulation" value="Not Present" />
+        <field desc="Can't be determined" name="Stereo Pair Detection" />
+        <field name="Audio Dropout" value="Not Present" />
+        <field name="Audio Pop" value="Not Present" />
+        <field desc="Info not found" name="Cinavia Watermark" />
+        <field name="Audio Crackle" value="Not Present" />
+        <field name="Impulsive Noise" value="Not Present" />
+      </info>
+      <errors>
+        <customchecks>
+          <genericaudiochecks name="Audio Description" sectionName="Common" />
+          <decodedaudiochecks name="Audio Quality" sectionName="Common">
+            <error SMPTETimecodeDuration="00:00:01:04" TimeCodeDuration="00:00:01:120" description="Momentary Loudness exceeds the limit for 00:00:01:120, starting from time: 00:00:08:120. Maximum loudness level: -17.8 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="231" endsmptetimecode="00:00:09:07" endtimecode="00:00:09:240" id="AQ.0009.02" item="ITU" level="-17.8 LKFS" location="Frame[203]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:08:04" startframeindex="203" startsmptetimecode="00:00:08:04" starttimecode="00:00:08:120" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:08:120">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-17.8" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:06:24" TimeCodeDuration="00:00:06:800" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:06:800, starting from time: 00:00:05:280. Maximum Mismatch detected: -10.986 dBFS." endframeindex="302" endsmptetimecode="00:00:12:02" endtimecode="00:00:12:080" id="AQ.0006.01" item="Level Mismatch" level="-10.986 dBFS" location="Frame[132]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:05:08" startframeindex="132" startsmptetimecode="00:00:05:08" starttimecode="00:00:05:280" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:05:280">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-10.986" />
+              </Params>
+            </error>
+            <error SMPTETimecodeDuration="00:00:00:20" TimeCodeDuration="00:00:00:680" description="Momentary Loudness exceeds the limit for 00:00:00:680, starting from time: 00:00:20:240. Maximum loudness level: -20.2 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="523" endsmptetimecode="00:00:20:28" endtimecode="00:00:20:920" id="AQ.0009.02" item="ITU" level="-20.2 LKFS" location="Frame[506]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:20:07" startframeindex="506" startsmptetimecode="00:00:20:07" starttimecode="00:00:20:240" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:20:240">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-20.2" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:06:14" TimeCodeDuration="00:00:06:480" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:06:480, starting from time: 00:00:14:400. Maximum Mismatch detected: -10.456 dBFS." endframeindex="522" endsmptetimecode="00:00:20:26" endtimecode="00:00:20:880" id="AQ.0006.01" item="Level Mismatch" level="-10.456 dBFS" location="Frame[360]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:14:12" startframeindex="360" startsmptetimecode="00:00:14:12" starttimecode="00:00:14:400" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:14:400">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-10.456" />
+              </Params>
+            </error>
+            <error SMPTETimecodeDuration="00:00:00:22" TimeCodeDuration="00:00:00:720" description="Momentary Loudness exceeds the limit for 00:00:00:720, starting from time: 00:00:22:720. Maximum loudness level: -20.1 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="586" endsmptetimecode="00:00:23:13" endtimecode="00:00:23:440" id="AQ.0009.02" item="ITU" level="-20.1 LKFS" location="Frame[568]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:22:22" startframeindex="568" startsmptetimecode="00:00:22:22" starttimecode="00:00:22:720" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:22:720">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-20.1" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:04:13" TimeCodeDuration="00:00:04:440" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:04:440, starting from time: 00:00:23:400. Maximum Mismatch detected: -9.92 dBFS." endframeindex="696" endsmptetimecode="00:00:27:25" endtimecode="00:00:27:840" id="AQ.0006.01" item="Level Mismatch" level="-9.920 dBFS" location="Frame[585]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:23:12" startframeindex="585" startsmptetimecode="00:00:23:12" starttimecode="00:00:23:400" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:23:400">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-9.920" />
+              </Params>
+            </error>
+            <error SMPTETimecodeDuration="00:00:00:18" TimeCodeDuration="00:00:00:600" description="Momentary Loudness exceeds the limit for 00:00:00:600, starting from time: 00:00:28:520. Maximum loudness level: -20.4 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="728" endsmptetimecode="00:00:29:04" endtimecode="00:00:29:120" id="AQ.0009.02" item="ITU" level="-20.4 LKFS" location="Frame[713]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:28:16" startframeindex="713" startsmptetimecode="00:00:28:16" starttimecode="00:00:28:520" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:28:520">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-20.4" />
+              </Params>
+            </error>
+            <error SMPTETimecodeDuration="00:00:00:22" TimeCodeDuration="00:00:00:720" description="Momentary Loudness exceeds the limit for 00:00:00:720, starting from time: 00:00:30:320. Maximum loudness level: -19.0 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="776" endsmptetimecode="00:00:31:01" endtimecode="00:00:31:040" id="AQ.0009.02" item="ITU" level="-19.0 LKFS" location="Frame[758]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:30:10" startframeindex="758" startsmptetimecode="00:00:30:10" starttimecode="00:00:30:320" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:30:320">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-19.0" />
+              </Params>
+            </error>
+            <error SMPTETimecodeDuration="00:00:00:22" TimeCodeDuration="00:00:00:720" description="Momentary Loudness exceeds the limit for 00:00:00:720, starting from time: 00:00:31:320. Maximum loudness level: -19.0 LKFS. Specified criteria: Report as Serious if 'Momentary Loudness'  more than -21 LKFS" endframeindex="801" endsmptetimecode="00:00:32:01" endtimecode="00:00:32:040" id="AQ.0009.02" item="ITU" level="-19.0 LKFS" location="Frame[783]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:31:10" startframeindex="783" startsmptetimecode="00:00:31:10" starttimecode="00:00:31:320" subitem="Level" synopsis="Audio Loudness error detected in the audio stream." timecode="00:00:31:320">
+              <Params>
+                <Param Name="AudioLoudnessLevel" Value="-19.0" />
+              </Params>
+            </error>
+            <error EBUCode="0123B,0095B" description="Channel layout is 'L, C, SL, LFE, SR, R'. Specified criteria: Report as Serious if Misplaced Channels detected" id="AQ.0014.01" item="Misplaced Channels" rap_sequence_num="-1" severity="Serious" subitem="MisplacedChannels" synopsis="Channel layout does not match the specified criteria.">
+              <Params>
+                <Param Name="ActualLayout" Value="L, C, SL, LFE, SR, R" />
+                <Param Name="ChannelLayout" Value="L, R, C, LFE, SL, SR" />
+              </Params>
+            </error>
+            <error description="Nielsen Watermark is Not Present. Specified criteria: Report as Serious if 'Nielsen Watermark' is not Present" id="AQ.0022.01" item="Nielsen WaterMarks" rap_sequence_num="-1" severity="Serious" subitem="PresenceCheck" synopsis="The presence of Nielsen Watermark does not match the specified criteria.">
+              <Params>
+                <Param Name="NielsenWatermarks" Value="Not Present" />
+              </Params>
+            </error>
+            <error EBUCode="0078B" SMPTETimecodeDuration="00:00:03:20" TimeCodeDuration="00:00:03:680" description="Audio Silence is detected in the stream, starting at time 00:00:34:760. Silence duration: 00:00:03:680. Specified criteria: Report as Serious if 'Silence in lead-out'  more than 00:00:01:500" endframeindex="961" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" id="AQ.0001.02" item="Silence" itemIndex="0" location="Frame[869]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:34:23" startframeindex="869" startsmptetimecode="00:00:34:23" starttimecode="00:00:34:760" subitem="Lead-out" synopsis="Audio Silence detected." timecode="00:00:34:760" />
+            <error EBUCode="0012B" description="Mean Phase Mismatch of 90.13 degrees is detected in the stream." id="AQ.0005.04" item="Phase Mismatch" severity="Serious" subitem="MeanPhaseMismatch" synopsis="Mean Phase Mismatch detected between the Left and right channel in the audio stream.">
+              <Params>
+                <Param Name="MismatchValue" Value="90.13" />
+                <Param Name="MismatchUnit" Value="degrees" />
+              </Params>
+            </error>
+            <error description="BVS Watermark Check could not be performed due to invalid or no response from web service." id="AQ.0041.02" item="BVSWatermarks" rap_sequence_num="-1" severity="Warning" synopsis="BVS Watermark Check could not be performed." />
+            <error SMPTETimecodeDuration="00:00:03:20" TimeCodeDuration="00:00:03:680" description="Minimum Audio Level exceeds the limit for 00:00:03:680, starting from time: 00:00:34:760. The Minimum Level detected: -90.31 dBFS. Specified criteria: Report as Serious if 'Minimum Level persists'  more than 00:00:01:500" endframeindex="961" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" id="AQ.0021.01" item="MinimumLevel" itemIndex="0" location="Frame[869]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:34:23" startframeindex="869" startsmptetimecode="00:00:34:23" starttimecode="00:00:34:760" subitem="MinLevelDuration" synopsis="Minimum Audio Level does not match the specified criteria." timecode="00:00:34:760">
+              <Params>
+                <Param Name="MinimumLevel" Value="-90.31" />
+              </Params>
+            </error>
+            <error description="Audio language detected is Dutch. The confidence score is 52%. Specified criteria: Report as Serious if 'Detected Language' is not English" id="AQ.0032.01" item="AudioLanguage" rap_sequence_num="-1" severity="Serious" subitem="DetectedLanguage" synopsis="Audio Language does not match the specified criteria.">
+              <Params>
+                <Param Name="Language" Value="Dutch" />
+                <Param Name="ConfidenceScore" Value="52" />
+                <Param Name="RestrictionLanguage" Value="English" />
+              </Params>
+            </error>
+          </decodedaudiochecks>
+          <DolbyEaudiochecks name="DolbyE Audio" />
+        </customchecks>
+      </errors>
+    </Program>
+    <Program Error="14" ProgramId="2" Warning="1">
+      <info>
+        <field name="Program Sequence" value="2" />
+        <field name="Applied Channel Configuration" value="L2, R2" />
+        <field desc="Not Present" name="NAES2" />
+        <field desc="Not Present" name="NWM" />
+        <field desc="Not Present" name="NAES2HF" />
+        <field name="Nielsen Watermark" value="Not Present" />
+        <field name="Pink Noise" value="Not Present" />
+        <field name="White Noise" value="Not Present" />
+        <field name="Phase Mismatch" value="Not Present" />
+        <field name="PPM Meter">
+          <mapping key="M6" value="3.80" />
+        </field>
+        <field name="BVS Watermark" value="Info not found" />
+        <field name="Minimum Level" value="-99.00" />
+        <field name="Audio Click" value="Not Present" />
+        <field desc="Cant be Determined" name="Speech Presence" />
+        <field name="EAS Message" value="Not Present" />
+        <field name="Average Level">
+          <mapping key="L2" value="-35.086" />
+        </field>
+        <field name="MomentaryLoudness70" value="-22.4" />
+        <field name="ShortTermLoudness70" value="-25.4" />
+        <field name="ProgramLoudnessSpeechGated">
+          <ProgramLoudness>
+            <Speech value="88" />
+            <level desc="Can't be determined" unit="LKFS" />
+          </ProgramLoudness>
+        </field>
+        <field name="ProgramLoudnessCALMAct">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-27.1" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="Average Loudness">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-27.1" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="AverageLoudnessARIB">
+          <ProgramLoudness>
+            <end value="00:00:38:440" />
+            <level value="-27.1" />
+            <start value="00:00:00:000" />
+          </ProgramLoudness>
+        </field>
+        <field name="EBULoudness">
+          <LoudnessValues>
+            <LoudnessRange value="3.6" />
+            <ProgramLoudness value="-27.1" />
+            <end value="00:00:38:440" />
+            <start value="00:00:00:000" />
+          </LoudnessValues>
+        </field>
+        <field name="OP59Loudness">
+          <LoudnessValues>
+            <LoudnessRange value="3.6" />
+            <ProgramLoudness value="-27.1" />
+            <end value="00:00:38:440" />
+            <start value="00:00:00:000" />
+          </LoudnessValues>
+        </field>
+        <field name="LoudnessProfile">
+          <ProgramLoudnessLevel value="-27.1" />
+          <ProgramLoudnessSpeech value="Can't be determined" />
+          <Speech value="88" />
+          <SpeechThresh value="20" />
+        </field>
+        <field name="Stereo Pair Detection">
+          <Level value="-30.97" />
+          <Mode value="Stereo" />
+        </field>
+        <field name="StereoPairChange" value="Not Present" />
+        <field name="AudioLanguage">
+          <LScore value="98" />
+          <Language value="French" />
+        </field>
+        <field name="LowPassFilter" value="Not Present" />
+        <field name="Audio Loop">
+          <mapping key="L2" value="Not Present" />
+          <mapping key="R2" value="Not Present" />
+        </field>
+        <field name="LinePattern75" value="Not Present" />
+        <field name="Echo" value="Not Present" />
+        <field name="Reverb" value="Not Present" />
+        <field name="TruePeakLevelCALMAct2">
+          <TruePeakStruct>
+            <channel value="L2" />
+            <level value="-9.1" />
+            <timecode value="00:00:00:560" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R2" />
+            <level value="-10.1" />
+            <timecode value="00:00:30:640" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelOP592">
+          <TruePeakStruct>
+            <channel value="L2" />
+            <level value="-9.1" />
+            <timecode value="00:00:00:560" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R2" />
+            <level value="-10.1" />
+            <timecode value="00:00:30:640" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelEBU2">
+          <TruePeakStruct>
+            <channel value="L2" />
+            <level value="-9.1" />
+            <timecode value="00:00:00:560" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R2" />
+            <level value="-10.1" />
+            <timecode value="00:00:30:640" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelITU2">
+          <TruePeakStruct>
+            <channel value="L2" />
+            <level value="-9.1" />
+            <timecode value="00:00:00:560" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R2" />
+            <level value="-10.1" />
+            <timecode value="00:00:30:640" />
+          </TruePeakStruct>
+        </field>
+        <field name="TruePeakLevelARIB2">
+          <TruePeakStruct>
+            <channel value="L2" />
+            <level value="-9.1" />
+            <timecode value="00:00:00:560" />
+          </TruePeakStruct>
+          <TruePeakStruct>
+            <channel value="R2" />
+            <level value="-10.1" />
+            <timecode value="00:00:30:640" />
+          </TruePeakStruct>
+        </field>
+        <field name="Maximum Level">
+          <mapping key="L2" value="-9.126" />
+        </field>
+        <field name="Level Mismatch" value="Present" />
+        <field name="Transient Noise" value="Not Present" />
+        <field name="Wow and Flutter" value="Not Present" />
+        <field name="Background Noise" value="Not Present" />
+        <field name="Jitter Noise" value="Not Present" />
+        <field name="Audio Clipping" value="Not Present" />
+        <field desc="Can't be determined" name="Misplaced Channels" />
+        <field name="High Frequency Noise" value="Not Present" />
+        <field name="Overmodulation" value="Not Present" />
+        <field name="Audio Dropout" value="Not Present" />
+        <field name="Audio Pop" value="Not Present" />
+        <field desc="Info not found" name="Cinavia Watermark" />
+        <field name="Audio Crackle" value="Not Present" />
+        <field name="Impulsive Noise" value="Not Present" />
+      </info>
+      <errors>
+        <customchecks>
+          <genericaudiochecks name="Audio Description" sectionName="Common" />
+          <decodedaudiochecks name="Audio Quality" sectionName="Common">
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:06:24" TimeCodeDuration="00:00:06:800" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:06:800, starting from time: 00:00:05:240. Maximum Mismatch detected: -11.66 dBFS." endframeindex="301" endsmptetimecode="00:00:12:01" endtimecode="00:00:12:040" id="AQ.0006.01" item="Level Mismatch" level="-11.660 dBFS" location="Frame[131]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:05:07" startframeindex="131" startsmptetimecode="00:00:05:07" starttimecode="00:00:05:240" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:05:240">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-11.660" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:07:08" TimeCodeDuration="00:00:07:280" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:07:280, starting from time: 00:00:14:360. Maximum Mismatch detected: -11.517 dBFS." endframeindex="541" endsmptetimecode="00:00:21:19" endtimecode="00:00:21:640" id="AQ.0006.01" item="Level Mismatch" level="-11.517 dBFS" location="Frame[359]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:14:11" startframeindex="359" startsmptetimecode="00:00:14:11" starttimecode="00:00:14:360" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:14:360">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-11.517" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:04:29" TimeCodeDuration="00:00:04:960" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:04:960, starting from time: 00:00:22:840. Maximum Mismatch detected: -11.765 dBFS." endframeindex="695" endsmptetimecode="00:00:27:24" endtimecode="00:00:27:800" id="AQ.0006.01" item="Level Mismatch" level="-11.765 dBFS" location="Frame[571]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:22:25" startframeindex="571" startsmptetimecode="00:00:22:25" starttimecode="00:00:22:840" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:22:840">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-11.765" />
+              </Params>
+            </error>
+            <error EBUCode="0077B" SMPTETimecodeDuration="00:00:05:22" TimeCodeDuration="00:00:05:720" description="Level Mismatch between the Left and Right audio channel is detected for 00:00:05:720, starting from time: 00:00:28:200. Maximum Mismatch detected: -10.249 dBFS." endframeindex="848" endsmptetimecode="00:00:33:28" endtimecode="00:00:33:920" id="AQ.0006.01" item="Level Mismatch" level="-10.249 dBFS" location="Frame[705]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:28:06" startframeindex="705" startsmptetimecode="00:00:28:06" starttimecode="00:00:28:200" subitem="Allowed Mismatch" synopsis="Level Mismatch detected between the Left and Right audio channel." timecode="00:00:28:200">
+              <Params>
+                <Param Name="MaximumMismatch" Value="-10.249" />
+              </Params>
+            </error>
+            <error description="Nielsen Watermark is Not Present. Specified criteria: Report as Serious if 'Nielsen Watermark' is not Present" id="AQ.0022.01" item="Nielsen WaterMarks" rap_sequence_num="-1" severity="Serious" subitem="PresenceCheck" synopsis="The presence of Nielsen Watermark does not match the specified criteria.">
+              <Params>
+                <Param Name="NielsenWatermarks" Value="Not Present" />
+              </Params>
+            </error>
+            <error EBUCode="0078B" SMPTETimecodeDuration="00:00:03:22" TimeCodeDuration="00:00:03:720" description="Audio Silence is detected in the stream, starting at time 00:00:34:720. Silence duration: 00:00:03:720. Specified criteria: Report as Serious if 'Silence in lead-out'  more than 00:00:01:500" endframeindex="961" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" id="AQ.0001.02" item="Silence" itemIndex="0" location="Frame[868]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:34:22" startframeindex="868" startsmptetimecode="00:00:34:22" starttimecode="00:00:34:720" subitem="Lead-out" synopsis="Audio Silence detected." timecode="00:00:34:720" />
+            <error EBUCode="0012B" description="Mean Phase Mismatch of 76.53 degrees is detected in the stream." id="AQ.0005.04" item="Phase Mismatch" severity="Serious" subitem="MeanPhaseMismatch" synopsis="Mean Phase Mismatch detected between the Left and right channel in the audio stream.">
+              <Params>
+                <Param Name="MismatchValue" Value="76.53" />
+                <Param Name="MismatchUnit" Value="degrees" />
+              </Params>
+            </error>
+            <error description="BVS Watermark Check could not be performed due to invalid or no response from web service." id="AQ.0041.02" item="BVSWatermarks" rap_sequence_num="-1" severity="Warning" synopsis="BVS Watermark Check could not be performed." />
+            <error SMPTETimecodeDuration="00:00:03:20" TimeCodeDuration="00:00:03:680" description="Minimum Audio Level exceeds the limit for 00:00:03:680, starting from time: 00:00:34:760. The Minimum Level detected: -99.0 dBFS. Specified criteria: Report as Serious if 'Minimum Level persists'  more than 00:00:01:500" endframeindex="961" endsmptetimecode="00:00:38:13" endtimecode="00:00:38:440" id="AQ.0021.01" item="MinimumLevel" itemIndex="0" location="Frame[869]" rap_sequence_num="-1" severity="Serious" smptetimecode="00:00:34:23" startframeindex="869" startsmptetimecode="00:00:34:23" starttimecode="00:00:34:760" subitem="MinLevelDuration" synopsis="Minimum Audio Level does not match the specified criteria." timecode="00:00:34:760">
+              <Params>
+                <Param Name="MinimumLevel" Value="-99.00" />
+              </Params>
+            </error>
+            <error description="Program Loudness Level is -27.1 LUFS. Specified criteria: Report as Serious if 'Program Loudness'  not between -24 and -22 LUFS" id="AQ.0016.03" item="EBU" itemIndex="0" level="-27.1 LUFS" rap_sequence_num="-1" severity="Serious" subitem="ProgramLoudnessEBU" synopsis="Program (integrated) Loudness error detected in the audio stream.">
+              <Params>
+                <Param Name="ProgramLoudness" Value="-27.1" />
+              </Params>
+            </error>
+            <error description="Program Loudness is -27.1 LKFS. Specified criteria: Report as Serious if 'Program Loudness'  not between -25 and -23 LKFS" id="AQ.0027.01" item="OP59" level="-27.1 LKFS" rap_sequence_num="-1" severity="Serious" subitem="ProgramLoudnessOP59" synopsis="OP-59: Program Loudness error detected in the audio stream.">
+              <Params>
+                <Param Name="ProgramLoudness" Value="-27.1" />
+              </Params>
+            </error>
+            <error description="Program Loudness is -27.1 LKFS. Specified criteria: Report as Serious if 'Program Loudness'  not between -26 and -22 LKFS" id="AQ.0019.01" item="CALM" itemIndex="0" level="-27.1 LKFS" rap_sequence_num="-1" severity="Serious" subitem="Program Loudness" synopsis="Violation of CALM Act.">
+              <Params>
+                <Param Name="ProgramLoudness" Value="-27.1" />
+              </Params>
+            </error>
+            <error description="Average Loudness Level is -27.1 LKFS. Specified criteria: Report as Serious if 'Average Loudness'  not between -25 and -23 LKFS" id="AQ.0038.02" item="ARIB" level="-27.1 LKFS" rap_sequence_num="-1" severity="Serious" subitem="AverageLoudnessARIB" synopsis="ARIB: Average Audio Loudness error is detected in the audio stream.">
+              <Params>
+                <Param Name="AverageLoudnessLevel" Value="-27.1" />
+              </Params>
+            </error>
+            <error description="Audio language detected is French. The confidence score is 98%. Specified criteria: Report as Serious if 'Detected Language' is not English" id="AQ.0032.01" item="AudioLanguage" rap_sequence_num="-1" severity="Serious" subitem="DetectedLanguage" synopsis="Audio Language does not match the specified criteria.">
+              <Params>
+                <Param Name="Language" Value="French" />
+                <Param Name="ConfidenceScore" Value="98" />
+                <Param Name="RestrictionLanguage" Value="English" />
+              </Params>
+            </error>
+            <error description="Audio Language in 2nd channel (English) is different from language in 1st channel (French). Specified criteria: Report as Serious if Language in both channels of stereo track is different" id="AQ.0032.05" item="AudioLanguage" rap_sequence_num="-1" severity="Serious" subitem="EnableStereo" synopsis="Difference in audio languages of left and right channels">
+              <Params>
+                <Param Name="Language" Value="French" />
+                <Param Name="Language2" Value="English" />
+              </Params>
+            </error>
+          </decodedaudiochecks>
+          <DolbyEaudiochecks name="DolbyE Audio" />
+        </customchecks>
+      </errors>
+    </Program>
+  </streamnode>
+
+</taskReport>

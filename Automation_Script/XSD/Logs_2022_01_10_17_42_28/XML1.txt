@@ -1,0 +1,4 @@
+[XML1] : [PASSED] 
+ Start Time : [ Mon Jan 10 17:42:28 PST 2022] || End Time : [ Mon Jan 10 17:42:29 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:1]
+XML1  -----------

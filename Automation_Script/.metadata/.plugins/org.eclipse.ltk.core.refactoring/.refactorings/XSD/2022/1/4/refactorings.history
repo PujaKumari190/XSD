@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;XSD/src/main/resources/XMLs/Smart-ISMC&apos; to &apos;Smart-DCP.xml&apos;" description="Rename resource &apos;Smart-ISMC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/XMLs/Smart-ISMC" name="Smart-DCP.xml" stamp="1642562458976" updateReferences="true"/>
+</session>

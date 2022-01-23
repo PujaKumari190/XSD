@@ -1,0 +1,28 @@
+package com.interra.XSD;
+
+import java.util.ArrayList;
+
+import org.testng.annotations.Test;
+
+import com.interra.Base.Base;
+import com.interra.Controller.LogManager;
+
+public class XML6 extends Base {
+static ArrayList<String> listofFiles = new ArrayList<String>();
+	
+	public static void setLog() {
+		LogManager.accessLogManager().createLogDirectory("XML6");
+	}
+	@Test
+	public void XML5() {
+		try {
+			setLog();
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+
+		}
+	}
+
+
+}

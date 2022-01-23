@@ -1,0 +1,8 @@
+[XML3] : [PASSED] 
+ Start Time : [ Wed Jan 12 21:14:56 PST 2022] || End Time : [ Wed Jan 12 21:15:43 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:47]
+XML3  -----------
+	streamnode>>errors>>customchecks>>genericaudiochecks(section name=custom)::MD5File [STATUS : PASS]
+	streamnode>>errors>>customchecks>>genericaudiochecks(section name=custom)::null [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(name not null)::Audio Quality [STATUS : PASS]
+	streamnode>>errors>>customchecks>>Decodedaudiochecks(name not null)::Common [STATUS : PASS]

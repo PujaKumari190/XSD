@@ -1,0 +1,8 @@
+[XML1] : [PASSED] 
+ Start Time : [ Thu Jan 20 13:22:07 PST 2022] || End Time : [ Thu Jan 20 13:22:08 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:1]
+XML5  -----------
+	Total number of streamnode = 5 [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>SystemItem>>SourcePackageID(value=1):: [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>SystemItem>>TImecode(value is in string format):: [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>PackageTrackOrder>>(Count = 1 and Name = Material Package (Index : 1)):: [STATUS : PASS]

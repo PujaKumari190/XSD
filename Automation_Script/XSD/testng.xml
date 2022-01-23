@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke">
+ 	<!-- <listeners>
+		<listener class-name="com.interra.rest.TestSuite.Retry.TestRetryAnalyzerListener" />
+	</listeners> -->
+  <test name="TEST_API">
+   <classes>
+   <class name="com.interra.XSD.XML6">
+    </class>
+  </classes>
+	<!-- <packages>
+	<package name="com.interra.rest.TestSuite.Tasks" /<
+</packages> -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

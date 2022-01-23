@@ -1,0 +1,1 @@
+\\192.168.4.179\RegressionQA\8.2\4x_smoke_8.2_106536\release

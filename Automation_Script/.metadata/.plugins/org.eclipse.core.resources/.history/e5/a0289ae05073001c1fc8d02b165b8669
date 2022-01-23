@@ -1,0 +1,243 @@
+package com.interra.XSD;
+import java.io.File;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Unmarshaller;
+
+import org.testng.annotations.Test;
+
+import com.google.inject.internal.Errors;
+import com.interra.Base.Base;
+import com.interra.Base.Logger;
+import com.interra.Controller.LogManager;
+import com.interra.Library.Configuration;
+
+import generated.ChecksType;
+import generated.Conformancechecks;
+import generated.Customchecks;
+import generated.Error;
+import generated.Field;
+import generated.Hierarchy;
+import generated.Info;
+import generated.ObjectFactory;
+import generated.Params;
+import generated.Streamnode;
+import generated.TaskReport;
+
+public class XML2 extends Base {
+	static ArrayList<String> listofFiles = new ArrayList<String>();
+	
+	public static void setLog() {
+		LogManager.accessLogManager().createLogDirectory("XML_2");
+		// Logger.accessLogger().setLogFile(logpath);
+	}
+	@Test
+	public void XML2() {
+
+		try {
+			
+			setLog();
+
+			/**********************
+			 * Creating List of All the XMLs inside a folder
+			 ***********************/
+			String XmlPath = Configuration.accessConfiguration().getXMLPath("XML_2");
+
+			JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
+			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+			TaskReport taskReport = (TaskReport) unmarshaller.unmarshal(new File(XmlPath));
+			
+			/**********************
+			 * Parse Task Report TAG Information
+			 ***********************/
+			System.out.println(" ###### Printing Items of TaskReport Tags #####");
+			
+			/**********************
+			 * Parse Top Level tag information
+			 ***********************/
+			
+			System.out.println("toplevelinfo >> summary : " + taskReport.getToplevelinfo().getSummary());
+			String summary = taskReport.getToplevelinfo().getSummary();
+			Logger.accessLogger().addReport("toplevelinfo >> summary:: " + summary, 1, "EQ",
+					summary != null ? 1 : 0, 1);
+			String info = taskReport.getToplevelinfo().getInfo();
+			Logger.accessLogger().addReport("toplevelinfo >> info:: " + info, 1, "EQ",
+					info != null ? 1 : 0, 1);
+			/**************************
+			 * Parse Hierarchy
+			 **************************/
+			System.out.println("Hierachy :" + taskReport.getHierarchy());
+			Hierarchy hierarchy = taskReport.getHierarchy();
+			Logger.accessLogger().addReport("Hierachy value" + hierarchy , 1, "EQ", hierarchy!=null ? 1:0,1);
+			
+			
+			/**********************
+			 * Info about Stream Nodes
+			 ***********************/
+
+			int streamNodeSize = taskReport.getStreamnode().size();
+			Logger.accessLogger().addReport("Total Stream Nodes Present:: " + streamNodeSize, 1, "EQ",
+					taskReport.getStreamnode().size() > 1 ? 1 : 0, 1);
+			List<Streamnode> listofStreamsNodes = taskReport.getStreamnode();
+			for(Streamnode node : listofStreamsNodes){
+				System.out.println(" streamnode >> Start Time code: " + node.getStartTimecode());
+				Logger.accessLogger().addReport("streamnode>>Fetching Data for Start Time code ::" + node.getStartTimecode(), 1,
+						"EQ", node.getStartTimecode() != null ? 1 : 0, 1);		
+		}
+			int startTime = 0;
+			int flag = 0;
+			int count =0;
+	outer:		for(Streamnode node : listofStreamsNodes){
+				List<Object> streamchild = node.getErrorsOrInfoOrSummary();
+				Info infoObj = (Info) streamchild.get(1);
+				System.out.println(infoObj.getField());
+			inner:	for (Field fieldItems : infoObj.getField()) {
+					System.out.println(fieldItems.getMedia());
+					if( fieldItems.getMedia()!=null && fieldItems.getMedia().equals("video")){
+						count++;				
+						Logger.accessLogger().addReport(
+								"streamnode(" + fieldItems.getMedia() + ")>>info>>field(media)::", 1, "EQ",
+								fieldItems.getMedia() != null ? 1 : 0, 1);
+						for (Object objFieldEntry : fieldItems.getEntry()) {
+							System.out.println(objFieldEntry.getClass());
+							if (objFieldEntry.getClass().toString().contains("SpecifiedLayout")) {
+								Field.SpecifiedLayout objFieldSL = (Field.SpecifiedLayout) objFieldEntry;
+								List<Field.SpecifiedLayout.Segment> segmentList = objFieldSL.getSegment();
+								for (Field.SpecifiedLayout.Segment objSegment : segmentList) {
+									if(objSegment.getStarttimecode()!= null){
+										startTime = 1;
+									}
+								}
+							}
+							if (objFieldEntry.getClass().toString().contains("ActualLayout")) {
+								Field.ActualLayout objFieldSL = (Field.ActualLayout) objFieldEntry;
+								List<Field.ActualLayout.Segment> segmentList = objFieldSL.getSegment();
+									for (Field.ActualLayout.Segment objSegment : segmentList) {
+										if (objSegment.getType().equals("Content") && objSegment.getFrameDuration().equals("67")) {
+											flag = 1;
+											break inner;
+						}			
+				      }
+				    }
+			      }
+			    }		
+						else{
+							count = 0;
+						}
+					System.out.println(count);
+
+			}
+			 Logger.accessLogger().addReport("StreamNode>>Info>>Field(Media)>>specifiedLayout>>segment(StartTimecode)",
+							1, "EQ", startTime == 1 ? 1 : 0, 1);
+	         Logger.accessLogger().addReport("StreamNode>>Info>>Field(Media)>>actualLayout>>segment(Type-Content, FrameDuration-67)",
+			1, "EQ", flag == 1 ? 1 : 0, 1);
+	         if (count==1){
+	        	 break outer;
+	         }
+	}
+			/************************
+			 * Parsing Errors
+			 ************************/
+			int namevalue = 0;
+	streamNode : for(Streamnode node1 : listofStreamsNodes){
+				List<Object> streamchild1 = node1.getErrorsOrInfoOrSummary();
+		generated.Errors errorsObj = (generated.Errors) streamchild1.get(0);
+		if(namevalue ==0){
+		 error:   for(Customchecks errorcustom: errorsObj.getCustomchecks()) {
+		    	System.out.println(errorcustom);
+		    	System.out.println(errorcustom.getDecoded3DvideochecksOrGIFimagechecksOrCanopusvideochecks());
+		    	for (ChecksType checksTypeitem : errorcustom.getDecoded3DvideochecksOrGIFimagechecksOrCanopusvideochecks()) {
+		         for(generated.Error subitem : checksTypeitem.getError()){
+		        	 if(subitem.getSubitem().equals("ContentLayout")){
+		        		 Logger.accessLogger().addReport("StreamNode>>Error>>customchecks>>systemencodingchecks>>error(subitem=ContentLayout)",
+									1, "EQ", subitem !=null? 1 : 0, 1); 
+		        		System.out.println(subitem.getParams());
+		             for(generated.Params error1: subitem.getParams()){
+		            	 for(generated.Param parmvalue: error1.getParam()){
+		            		 if(parmvalue.getName()!=null){
+		            			namevalue =1; 
+		            			 Logger.accessLogger().addReport("StreamNode>>Error>>customchecks>>systemencodingchecks>>error>>parms(name=check not null)",
+		     							1, "EQ", namevalue, 1);
+		            			break error;
+		            			
+		            		 }
+		            	 }
+		             }
+		            	 
+		        		 
+		        	 }
+		         }
+			}
+			}
+		}
+		/**************************************
+		 * Parsing conformanceChecks in Error
+		 **************************************/
+		for(Conformancechecks errorconf : errorsObj.getConformancechecks()){
+			System.out.println(errorconf);
+			List<Object> conferror = errorconf.getBufferAnalysisChecksOrError();
+			
+			generated.Error error1 = (Error) conferror.get(0);
+			if(error1.getSeverity().equals("Serious")){
+				Logger.accessLogger().addReport("StreamNode>>Error>>conformancechec>>error(severity=seroius)",
+							1, "EQ",error1.getSeverity()!=null?1:0 , 1);
+			}
+			if(error1.getDescription().contains("CODECS attribute in STREAM-INF tag must be present in a Master playlist file")){
+				Logger.accessLogger().addReport("StreamNode>>Error>>conformancechec>>error(description should not be null))",
+						1, "EQ",error1.getDescription()!=null?1:0 , 1);
+			}
+		}
+		break streamNode;
+			}
+		/****************************************
+		 * Parsing Second streamnode>> MPEG2TPTchecks
+		 *****************************************/
+			Streamnode streamnode1 = listofStreamsNodes.get(1);
+			int mpeg2 = 0;
+			int parmname = 0;
+			System.out.println(" streamnode >> Fetching Data for EncodedDuration: " + streamnode1.getEncodedDuration());
+			Logger.accessLogger().addReport("streamnode>>Fetching Data for Stream name::" + streamnode1.getEncodedDuration(), 1,
+					"EQ", streamnode1.getEncodedDuration() != null ? 1 : 0, 1);
+			
+			System.out.println("streamnode >> Fetching Data for Folder Name: " + streamnode1.getFolderName());
+			Logger.accessLogger().addReport("streamnode>>Fetching Data for Stream name::" + streamnode1.getFolderName(), 1,
+					"EQ", streamnode1.getFolderName() != null ? 1 : 0, 1);
+			
+			BigInteger secondStramnodeError1 =  streamnode1.getError();
+			System.out.println(secondStramnodeError1);
+			
+			List<Object> streamchild2 = streamnode1.getErrorsOrInfoOrSummary();
+			generated.Errors errorsObj = (generated.Errors) streamchild2.get(0);
+			for(Customchecks errorcustom1: errorsObj.getCustomchecks()) {
+				for(ChecksType errortypes : errorcustom1.getDecoded3DvideochecksOrGIFimagechecksOrCanopusvideochecks()){
+					if(errortypes.getName().equals("MPEG2 Transport")){
+						mpeg2=1;
+						Logger.accessLogger().addReport("streamnode>>errors>>customchecks>>MPEG2TPTchecks(name=MPEG2 Transport)::" + streamnode1.getFolderName(), 1,
+								"EQ", mpeg2, 1);
+						generated.Error firsterror = (Error) errortypes.getError();
+						if(firsterror.getId().equalsIgnoreCase("MPEG2TS.0018.01")){
+							for(generated.Params parmNames: firsterror.getParams()){
+								for(generated.Param firstParmName: parmNames.getParam()){
+									if(firstParmName.getName().equalsIgnoreCase("PCRPIDS")){
+										parmname = 1;
+										Logger.accessLogger().addReport("streamnode>>errors>>customchecks>>MPEG2TPTchecks(name=MPEG2 Transport)>>error(id=MPEG2TS.0018.01)>>Parm(name=PCRPIDS)::" + streamnode1.getFolderName(), 1,
+												"EQ", parmname, 1);
+									}
+								}
+							}
+						}
+					}
+		
+				}
+			}			
+					
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+
+		}
+       }
+	}
+

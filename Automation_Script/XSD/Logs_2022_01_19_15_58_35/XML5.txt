@@ -1,0 +1,10 @@
+[XML1] : [PASSED] 
+ Start Time : [ Wed Jan 19 15:58:35 PST 2022] || End Time : [ Wed Jan 19 15:58:36 PST 2022 ] 
+ EXECUTION DURATION =[ 0d 0:0:1]
+XML5  -----------
+	Total number of streamnode = 5 [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>SystemItem>>SourcePackageID(value=1):: [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>SystemItem>>TImecode(value is in string format):: [STATUS : PASS]
+	streamnode>>substream(Error = 20 and fileName = tos_video.mxf,Label = MXF)>>info>>field>>PackageTrackOrder>>(Count = 1 and Name = Material Package (Index : 1)):: [STATUS : PASS]
+	Third streamnode>>(CPLName = b5b465cc-1ed3-4497-8abc-023b09b5fc45_cpl.xml, FolderName= PictureTrack_1, ID = 2,Name = Motion JPEG2000 Video):: [STATUS : PASS]
+	Third streamnode>>(CPLName = b5b465cc-1ed3-4497-8abc-023b09b5fc45_cpl.xml, FolderName= PictureTrack_1, ID = 2,Name = Motion JPEG2000 Video)>>errors>>customchecks>>MJPEG2000videochecks(name = Motion JPEG2000 Video, SectionName = common ):: [STATUS : PASS]
